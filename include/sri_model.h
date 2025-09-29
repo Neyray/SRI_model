@@ -1,4 +1,3 @@
-```cpp
 #pragma once
 #include <string>
 #include <vector>
@@ -139,6 +138,6 @@ inline std::vector<Archetype> ArchetypeFactory::getAllArchetypes() {
 }
 
 } // namespace SRI
-```
+
 
 } // namespace SRI
