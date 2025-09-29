@@ -1,16 +1,18 @@
-﻿cmake_minimum_required(VERSION 3.10)
-project(SRI_Model VERSION 0.1 LANGUAGES CXX)
+﻿# Set the minimum required version of CMake
+cmake_minimum_required(VERSION 3.10)
 
-set(CMAKE_CXX_STANDARD 17)
+# Set the project name
+project(SRI_Model)
+
+# Set the C++ standard
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# include 目录
-include_directories(\/include)
+# Specify the directory containing header files
+include_directories(include)
 
-# 主可执行文件（示例：把 main.cpp 和 test_sri.cpp 一起编译；将来可拆分）
-add_executable(sri_model
-    src/main.cpp
-    src/test_sri.cpp
-)
+# Add the main executable for the simulation
+add_executable(sri_simulation src/main.cpp)
 
-target_include_directories(sri_model PRIVATE \/include)
+# Add the test executable
+add_executable(run_tests src/test_sri.cpp)
